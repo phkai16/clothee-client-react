@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  color: lightgreen;
+}
+
+:root {
+  --primary: #007dfe;
+  --light-primary: #bfd8ff;
+  --dark-primary: #0062ca;
+  --dark-background: #282c34;
+
+  --blue: cornflowerblue;
+  --pink: pink;
+  --beige: beige;
+  --black: black;
+  --gray: gray;
+  --white: white;
+  --yellow: lightyellow;
+  --orange: orange;
+  --green: lightgreen;
+}
