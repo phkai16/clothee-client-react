@@ -33,17 +33,6 @@ const Products = ({ category, filters, sort }) => {
   console.log(category);
 
   useEffect(() => {
-    // const getProducts = async () => {
-    //   try {
-    //     const res = await axios.get(
-    //       category
-    //         ? `http://localhost:5000/api/products?category=${category}`
-    //         : "http://localhost:5000/api/products"
-    //     );
-    //     setProducts(res.data);
-    //   } catch (err) {}
-    // };
-    // getProducts();
     console.log(products);
     if (isSuccess) {
       category && setProducts(data);

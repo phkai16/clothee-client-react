@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-// import { logout } from "../redux/apiCalls";
 import { Badge } from "@mui/material";
 import { clearAccount } from "../redux/user.slice";
 const Container = styled.div`

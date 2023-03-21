@@ -166,9 +166,9 @@ const Product = () => {
   };
 
   const handleClick = () => {
-    // update cart
-    console.log({ ...product, quantity, color, size });
-    dispatch(addToCart({ ...product, quantity, color, size }));
+    dispatch(
+      addToCart({ ...product, productId: product._id, quantity, color, size })
+    );
   };
   return (
     <Container>

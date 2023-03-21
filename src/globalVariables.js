@@ -1,4 +1,3 @@
-const BASE_URL = "http://localhost:5500";
-const REACT_APP_STRIPE =
-  "pk_test_51L2ukyDUS5q0k20EDR91HX8pZc1xbClX448EsBrlt7JJ79Dp9eNEDPgdZ5ZBuzJ997xDnby46hT68JfvIVJkbWHl00SPeRt0oZ";
-export { BASE_URL, REACT_APP_STRIPE };
+// const BASE_URL = "http://localhost:5500";
+const BASE_URL = "https://clothee-api-mongo.onrender.com";
+export { BASE_URL };

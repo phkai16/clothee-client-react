@@ -2,11 +2,10 @@ import { Add, Remove } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { mobile } from "../responsive";
-import { useEffect, useState } from "react";
-import { Link, useHistory, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { clearCart } from "../redux/cart.slice";
 import { useAddOrderMutation } from "../service/api.order";
-const KEY = process.env.REACT_APP_STRIPE;
 
 const Container = styled.div`
   width: 100%;
@@ -203,19 +202,13 @@ const Cart = () => {
     dispatch(clearCart());
   };
   const handleClick = async () => {
-    // try {
-    //   const res = await userRequest.post("/orders", {
-    //     userId: currentUser.currentUser._id,
-    //     products: cart.products,
-    //     amount: cart.total,
-    //     address: "",
-    //   });
-    //   // dispatch(clearCart());
-    //   // history.push("/success", { data: res.data });
-    // } catch (err) {
-    //   console.log(err);
-    // }
     addOder({
+      userId: currentUser._id,
+      products: cart.products,
+      amount: cart.total,
+      address: currentUser.address,
+    });
+    console.log({
       userId: currentUser._id,
       products: cart.products,
       amount: cart.total,
@@ -225,8 +218,8 @@ const Cart = () => {
 
   useEffect(() => {
     if (isSuccess) {
-      dispatch(clearCart());
       navigate("/success");
+      dispatch(clearCart());
     }
   }, [isSuccess]);
 
